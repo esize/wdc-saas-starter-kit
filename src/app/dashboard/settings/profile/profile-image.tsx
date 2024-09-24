@@ -36,12 +36,12 @@ async function ProfileImageContent() {
   const profile = await getUserProfileLoader(user.id);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-row">
       <Image
         src={getProfileImageFullUrl(profile)}
         width={150}
         height={150}
-        className="rounded-xl mb-4 sm:mb-6"
+        className="rounded-xl mr-4 sm:mr-6"
         alt="Profile image"
       />
       <ProfileImageForm />

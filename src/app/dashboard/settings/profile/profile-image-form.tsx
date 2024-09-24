@@ -66,35 +66,37 @@ export function ProfileImageForm() {
   };
 
   return (
-    <Form {...form}>
-      <form
-        ref={formRef}
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 flex gap-2"
-      >
-        <FormField
-          control={form.control}
-          name="file"
-          render={({ field: { value, onChange, ...fieldProps } }) => (
-            <FormItem>
-              <FormLabel>Image</FormLabel>
-              <FormControl>
-                <Input
-                  {...fieldProps}
-                  type="file"
-                  accept="image/*"
-                  onChange={(event) => {
-                    const file = event.target.files && event.target.files[0];
-                    onChange(file);
-                  }}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <LoaderButton isLoading={isPending}>Upload</LoaderButton>
-      </form>
-    </Form>
+    <div className="flex-1">
+      <Form {...form}>
+        <form
+          ref={formRef}
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-8 flex gap-2"
+        >
+          <FormField
+            control={form.control}
+            name="file"
+            render={({ field: { value, onChange, ...fieldProps } }) => (
+              <FormItem>
+                <FormLabel>Image</FormLabel>
+                <FormControl>
+                  <Input
+                    {...fieldProps}
+                    type="file"
+                    accept="image/*"
+                    onChange={(event) => {
+                      const file = event.target.files && event.target.files[0];
+                      onChange(file);
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <LoaderButton isLoading={isPending}>Upload</LoaderButton>
+        </form>
+      </Form>
+    </div>
   );
 }
