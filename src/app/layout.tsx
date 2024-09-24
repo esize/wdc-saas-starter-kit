@@ -41,21 +41,11 @@ export const metadata: Metadata = {
   openGraph:
     mode === "comingSoon"
       ? {
-          title: "WDCStarterKit.com",
-          description:
-            "I'm building the ultimate next.js starter kit to help you hit the ground runnning on your next saas product.",
-          url: "https://wdcstarterkit.com",
-          siteName: "WDC StarterKit",
+          title: "The Happy Path",
+          description: "The Next.js Starter Kit sure to keep you smiling.",
+          url: "https://happypath.pro",
+          siteName: "The Happy Path",
           type: "website",
-          images: [
-            {
-              url: "https://wdcstarterkit.com/starterkitcard.png",
-              secureUrl: "https://wdcstarterkit.com/starterkitcard.png",
-              width: 800,
-              height: 418,
-              alt: "The WDC StarterKit social media card image",
-            },
-          ],
         }
       : undefined,
 };

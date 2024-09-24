@@ -34,7 +34,6 @@ export const generateStripeSessionAction = authenticatedAction
     const stripeSession = await stripe.checkout.sessions.create({
       success_url: `${env.HOST_NAME}/success`,
       cancel_url: `${env.HOST_NAME}/cancel`,
-      payment_method_types: ["card"],
       customer_email: email ? email : undefined,
       mode: "subscription",
       line_items: [

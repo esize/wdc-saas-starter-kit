@@ -1,7 +1,8 @@
 "use client";
+import { env } from "@/env";
 
 export function BreakpointOverlay() {
-  if (process.env.NEXT_PUBLIC_IS_LOCAL !== "true") return null;
+  if (!env.NEXT_PUBLIC_IS_LOCAL) return null;
 
   return (
     <div className="fixed bottom-2 right-2 bg-yellow-300/50 bg-opacity-75 text-white px-2 py-1 rounded-md text-sm z-50">

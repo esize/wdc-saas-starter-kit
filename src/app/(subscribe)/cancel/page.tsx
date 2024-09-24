@@ -17,7 +17,7 @@ export default function SuccessPage() {
           <Button variant="secondary" asChild size="lg">
             <Link
               target="_blank"
-              href="https://github.com/webdevcody/ppai-next-starter"
+              href="https://github.com/esize/the-happy-path"
             >
               🆓 Checkout my free next.js starter kit 🆓
             </Link>

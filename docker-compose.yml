@@ -1,9 +1,8 @@
-version: "3.9"
 services:
-  wdc-saas-starter-kit:
+  the-happy-path-db:
     image: postgres
     restart: always
-    container_name: wdc-saas-starter-kit
+    container_name: the-happy-path-db
     ports:
       - 5432:5432
     environment:

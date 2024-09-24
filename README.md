@@ -1,33 +1,3 @@
-Notice! this starter kit isn't fully finished, but I'm just making this public for now if anyone wants to add onto it. I'm getting burned out on working on this so I'm open to anyone wanting to help contribute to fixing up any bugs they find, etc.
-
-# Code Walkthrough (Early Access)
-
-For those wanting more hands on video walkthrough content that explains this code base, shows how to deploy it, and how to maintain it in production, I'm working on a paid video walkthrough series found here [https://webdevcody.gumroad.com/l/wdc-saas-starter-kit-walkthrough](https://webdevcody.gumroad.com/l/wdc-saas-starter-kit-walkthrough). I'm in the process of recording and editing videos, but if you purchase now it's 50% off the original pricing.
-
-# Welcome to the Starter Kit
-
-Welcome to the WDC Next.js Starter Kit! This is a github template which contains the following technology we feel is a great starting point for any new SaaS product:
-
-- Authentication (Lucia)
-- Authorization
-- Subscription Management (Stripe)
-- Stripe Integration / Webhooks
-- Group Management
-- File Upload to R2
-- Drizzle ORM
-- Light / Dark Mode
-- ShadCN
-- Tailwind CSS
-- Posthog Analytics
-
-## Contributing
-
-If you find obvious issues with this starter kit, feel free to submit a pull request or submit and issue. We want to keep this starter simple with the core technology picked, so we don't recommend trying to add in various things without prior approval.
-
-## How to Get Started
-
-Start by clicking the "use this template" button on the github repo. We suggest creating a new repository so you can track your code changes. After, clone your own repository down to your computer and start working on it.
-
 ### Prerequisites
 
 This starter kit does uses Docker and Docker Compose to run a postgres database, so you will need to either have those installed, or modify the project to point to a hosted database solution.
@@ -42,7 +12,7 @@ This starter kit does uses Docker and Docker Compose to run a postgres database,
 
 ## Env Setup
 
-This starter kit depends on a few external services, such as **google oauth**, **stripe**, and **resend**. You'll need to following the steps below and make sure everything is setup and copy the necesssary values into your .env file:
+This starter kit depends on a few external services, such as **github oauth**, **stripe**, and **resend**. You'll need to following the steps below and make sure everything is setup and copy the necesssary values into your .env file:
 
 ## Resend
 
@@ -83,8 +53,7 @@ Depending on if you are developing locally or deploying to prod, there are two p
 ### Local Development
 
 1. Install the Stripe CLI:
-For macOS or Linux, you can use Homebrew: `brew install stripe/stripe-cli/stripe`
-- For Windows, you can use the Windows installer from the Stripe CLI GitHub releases page - https://github.com/stripe/stripe-cli/releases
+
 2. Add Stripe CLI to your PATH:
 Ensure the directory containing the Stripe CLI executable is in your system's PATH environment variable.
 3. We provided an npm alias `stripe:listen` you can run if you want to setup your locally running application to listsen for any stripe events. Run this command and copy the webhook secret it prints to the console into your .env file.
